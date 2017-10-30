@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Github Repository Summary</title>
+	<script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/d3.min.js"></script>
+    <script type="text/javascript" src="scripts/authors.js"></script>
+    <script type="text/javascript" src="scripts/processedData.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="vizContainer" class="containers">
+        <div class="positionContainers">
+            <svg id="contributor-chart">
+                <defs>
+                    <linearGradient id="linear">
+                        <stop offset="0%"   stop-opacity="1" stop-color="steelblue" />
+                        <stop offset="50%" stop-opacity="0.8" stop-color="#417198" />
+                        <stop offset="100%" stop-opacity="0.05" stop-color="#455e73" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+
+    <div id="SettingsContainer" class="containers">
+        <div class="positionContainers">
+            <div id="vizForm" class="form">
+                <div class="row">
+                    <label>Collaborator in Comparison
+                        <select name="collaboratorToCompare" class="form-input"></select>
+                    </label>
+                </div>
+                <div class="row">
+                    <label>Max number of top collaborators to pick
+                        <input name="maxCollaborators" class="form-input" type="number" min="2" max="100" value="20"/>
+                    </label>
+                </div>
+                <div class="row">
+                    <button type="button" id="update-settings" class="form-input">update</button>
+                </div>
+            </div>
+            <div class="legend">
+                <h2>Legend</h2>
+                <svg id="legendContainer"></svg>
+                <div class="description">
+                    <h3> Description </h3>
+                    A single slice displays last 30 weeks of github repository activity. This limitation is imposed by GitHub on it's public API's. A total of 100 contributors can be selected on the wheel.
+                    Links present at the center only exist for double actors events. Link direction is from Issue assigner to assignee and from a commenter to person mentioned in the issue comment. Direction is encoded as opacity of the link, from opaque to transparent.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/staticDataViz.js"></script>
+</body>
+</html>

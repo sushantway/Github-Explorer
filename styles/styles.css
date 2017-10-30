@@ -1,0 +1,140 @@
+body {
+    width:100%;
+    height:100%;
+    margin: 0;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.containers {
+    display: inline-block;
+    float: left;
+    height: 100%;
+}
+
+.positionContainers {
+    padding: 1%;
+    width: 98%;
+    height: 100%;
+}
+
+#vizContainer {
+    width: 75%;
+    text-align: center;
+}
+
+#SettingsContainer {
+    width: 25%;
+}
+
+#SettingsContainer .positionContainers {
+    border-left: 2px solid rgba(0,0,0,0.2);
+    overflow: auto;
+}
+
+.form {
+    text-align: center;
+}
+
+.form .row{
+    padding: 8px 0;
+}
+
+.form .alignCenter{
+    text-align: center;
+}
+
+.form .form-input{
+    width: 80%;
+    margin-top: 4px;
+}
+
+.eventLink {
+    /*stroke: steelblue;*/
+    fill: none;
+    pointer-events: none;
+}
+
+.highlighting .eventLink {
+    opacity: 0;
+}
+
+.highlighting .highlight {
+    opacity: 1;
+}
+
+.contributorBG {
+    fill: #000000;
+    fill-opacity: 0.01;
+    stroke: #000000;
+    stroke-opacity: 0.05;
+}
+
+.commitBG {
+    fill: #9eafc7;
+    fill-opacity: 0.1;
+}
+
+.addDelAxis, .commitAxis {
+    stroke: #000;
+    stroke-width: 1;
+    fill: none;
+    opacity: 0.2;
+}
+
+.contributorBG.comparing {
+    stroke-opacity: 0.4;
+    fill-opacity: 0.1;
+}
+
+.weeklyEvent.noWeekEvent{
+    fill: #000000;
+    opacity: 0.05;
+}
+
+.weeklyEvent.singleActors {
+    fill: #8cc73b;
+}
+
+.weeklyEvent.doubleActors {
+    fill: #5aabe0;
+}
+
+.additions{
+    fill: #88e47c;
+}
+
+.deletions{
+    fill: #e68080;
+}
+
+.commits {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1px;
+    stroke-opacity: 0.5;
+}
+
+.authors {
+    text-anchor: middle;
+}
+
+#legendContainer text {
+    font-size: 0.7em;
+    text-anchor: middle;
+}
+
+.legend{
+    margin-top: 20%;
+}
+
+.description{
+    color: #424242;
+    text-align: justify;
+    padding: 6%;
+    font-size: 0.9em;
+}
